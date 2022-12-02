@@ -1,0 +1,173 @@
+
+:root {
+  --primary-color: #FF6F00;
+  --secondary-color: #FBFBFB;
+  --shadow-color:#e6e3e3;
+  --font-default: bahnschrift;
+}
+
+
+
+
+
+
+body{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+h1 {
+  font-size: 3rem !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+}
+
+h3 {
+  font-size: 1rem !important;
+}
+
+h4 {
+  font-size: 0.9rem !important;
+}
+
+h5 {
+  font-size: 0.6rem !important;
+}
+
+h6 {
+  font-size: 0.5rem !important;
+}
+
+/* toolbar pc */
+
+.toolbar-pc{
+  height: 90px;
+}
+
+.toolbar-phone{
+  display: none;
+}
+
+.top-bar-pc{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
+.menu-item{
+  color: black;
+  margin-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: bahnschrift;
+}
+
+.menu-item-selected{
+  color: var(--primary-color);
+  margin-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: bahnschrift;
+  font-style: bold;
+  font-weight: 800;
+}
+
+.menu-item:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.menu-item-selected:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+
+.login-div{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-align: center;
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 100px;
+}
+.login-div:hover{
+  background-color: var(--primary-color);
+  border: 1px solid white;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* mobile phone  */
+
+@media (max-width: 1100px) {
+
+  body{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  h1 {
+    font-size: 7rem !important;
+  }
+
+  h2 {
+    font-size: 5rem !important;
+  }
+
+  h3 {
+    font-size: 3rem !important;
+  }
+
+  h4 {
+    font-size: 2.4rem !important;
+  }
+
+  h5 {
+    font-size: 1.5rem !important;
+  }
+
+  .toolbar-pc{
+    display: none;
+  }
+
+  .toolbar-phone{
+    display: flex;
+    height: 120px;
+    width: 100%;
+    box-shadow: 10px 10px 10px var(--shadow-color);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+
+  .menu-icon-div{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-right: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: 10px 10px 10px var(--shadow-color);
+}
+
+
+
+}
