@@ -148,7 +148,7 @@ h6 {
 
   .toolbar-phone{
     display: flex;
-    height: 120px;
+    height: 150px;
     width: 100%;
     box-shadow: 10px 10px 10px var(--shadow-color);
     text-align: center;
