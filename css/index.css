@@ -265,6 +265,11 @@ h6 {
   border-radius: 30px;
 }
 
+.service-div-phone{
+  display: none;
+
+}
+
 
 
 
@@ -440,7 +445,6 @@ h6 {
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 30px;
-
 }
 
 
