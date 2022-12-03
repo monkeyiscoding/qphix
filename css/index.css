@@ -319,7 +319,7 @@ h6 {
 
   .toolbar-phone{
     display: flex;
-    height: 150px;
+    height: 200px;
     width: 100%;
     position: fixed;
     box-shadow: 10px 10px 10px var(--shadow-color);
@@ -341,7 +341,7 @@ h6 {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-right: 20px;
+    margin-right: 50px;
     background-color: var(--secondary-color);
     box-shadow: 10px 10px 10px var(--shadow-color);
   }
@@ -431,7 +431,7 @@ h6 {
 
 
 .course-div-phone-1{
-  height: 900px;
+  height: 1100px;
   width: 80%;
   box-shadow: 4px 8px 10px #ebebeb;
   margin-right: 50px;
@@ -444,9 +444,8 @@ h6 {
 }
 
 
-
 .course-div-phone-2{
-  height: 900px;
+  height: 1100px;
   width: 80%;
   box-shadow: 4px 8px 10px #ebebeb;
   margin-right: 50px;
@@ -458,6 +457,25 @@ h6 {
   margin-top: 100px;
 
 }
+
+
+.course-div-phone-3{
+  height: 1100px;
+  width: 80%;
+  box-shadow: 4px 8px 10px #ebebeb;
+  margin-right: 50px;
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 30px;
+  margin-top: 100px;
+
+}
+
+
+
+
 
 
 
