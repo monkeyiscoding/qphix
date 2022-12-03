@@ -14,6 +14,7 @@
 body{
   padding-left: 10%;
   padding-right: 10%;
+  font-family: bahnschrift;
 }
 
 h1 {
@@ -22,12 +23,12 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem !important;
+  font-size: 2rem !important;
   font-family: bahnschrift;
 }
 
 h3 {
-  font-size: 1rem !important;
+  font-size: 1.3rem !important;
   font-family: bahnschrift;
 }
 
@@ -74,6 +75,7 @@ h6 {
   font-size: 20px;
   text-decoration: none;
   font-family: bahnschrift;
+  transition: 0.5s;
 }
 
 .menu-item-selected{
@@ -102,15 +104,21 @@ h6 {
   align-items: center;
   margin-left: 20px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 100px;
+  border-radius: 10px;
   transition: 0.5s;
 }
 .login-div:hover{
   background-color: var(--primary-color);
   border: 1px solid white;
+
+}
+
+.log:hover{
+  text-decoration: none;
+  color: white;
 
 }
 
@@ -125,6 +133,12 @@ h6 {
 
 
 }
+
+.intro-div-phone{
+  display: none;
+}
+
+
 .heading{
   color: var(--primary-color);
   text-shadow:0px 5px 10px var(--shadow-color);
@@ -165,6 +179,10 @@ h6 {
 }
 
 
+.verification-div-phone{
+  display: none;
+}
+
 .verification-div{
   background-color: white;
   box-shadow: 5px 5px 5px var(--shadow-color);
@@ -183,7 +201,7 @@ h6 {
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-  margin-right: 40px;
+  margin-right: 55px;
 }
 
 .verify-div-2{
@@ -191,13 +209,60 @@ h6 {
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-  margin-left: 40px;
+  margin-left: 55px;
 }
 
 .vert-line{
   width: 1px;
   height: 100%;
   background-color: var(--shadow-color);
+}
+
+
+.service-div-pc{
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+}
+
+.course-div-pc-1{
+  height: 400px;
+  width: 250px;
+  box-shadow: 4px 8px 10px #ebebeb;
+  margin-right: 50px;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+
+}
+
+.course-div-pc-2{
+  height: 400px;
+  width: 250px;
+  box-shadow: 4px 8px 10px #ebebeb;
+  margin-left: 50px;
+  margin-right: 50px;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+
+}
+
+.course-div-pc-3{
+  height: 400px;
+  width: 250px;
+  box-shadow: 4px 8px 10px #ebebeb;
+  margin-left: 50px;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+
+
+}
+
+.course-img{
+  width: 80%;
+  border-radius: 30px;
 }
 
 
@@ -311,6 +376,86 @@ h6 {
 
 .flying-boy-phone{
   height: 1000px;
+
+}
+
+.verification-div-phone{
+  background-color: white;
+  box-shadow: 5px 5px 5px var(--shadow-color);
+  width: 80%;
+  height: 400px;
+  margin-top: 150px;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.verify-div-1{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  margin-right: 80px;
+}
+
+.verify-div-2{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  margin-left: 80px;
+}
+
+
+.service-div-pc{
+  display: none;
+
+}
+
+.phone-gape{
+  height: 100px;
+}
+
+.service-div-phone{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+.course-div-phone-1{
+  height: 900px;
+  width: 80%;
+  box-shadow: 4px 8px 10px #ebebeb;
+  margin-right: 50px;
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 30px;
+
+}
+
+
+
+.course-div-phone-2{
+  height: 900px;
+  width: 80%;
+  box-shadow: 4px 8px 10px #ebebeb;
+  margin-right: 50px;
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 30px;
+  margin-top: 100px;
 
 }
 
