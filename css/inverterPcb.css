@@ -1,0 +1,418 @@
+:root {
+  --primary-color: #FF6F00;
+  --secondary-color: #FBFBFB;
+  --shadow-color:#e6e3e3;
+  --font-default: bahnschrift;
+}
+
+
+
+
+
+
+body{
+  font-family: bahnschrift;
+}
+
+h1 {
+  font-size: 3rem !important;
+  font-family: bahnschrift;
+}
+
+h2 {
+  font-size: 2rem !important;
+  font-family: bahnschrift;
+}
+
+h3 {
+  font-size: 1.3rem !important;
+  font-family: bahnschrift;
+}
+
+h4 {
+  font-size: 0.9rem !important;
+  font-family: bahnschrift;
+}
+
+h5 {
+  font-size: 0.6rem !important;
+  font-family: bahnschrift;
+}
+
+h6 {
+  font-size: 0.5rem !important;
+  font-family: bahnschrift;
+}
+
+
+.title{
+  font-size: 5rem !important;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+
+.toolbar-pc{
+  width: 100%;
+  position: fixed;
+  height: 80px;
+  padding-left: 10%;
+  padding-top: 10px;
+  background-color: white;
+  padding-right: 10%;
+  box-shadow: 5px 5px 5px var(--shadow-color);
+
+
+}
+
+.toolbar-phone{
+  display: none;
+}
+
+.top-bar-pc{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
+.menu{
+  display: none;
+}
+
+.menu-item{
+  color: black;
+  margin-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: bahnschrift;
+  transition: 0.5s;
+}
+
+.menu-item-selected{
+  color: var(--primary-color);
+  margin-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: bahnschrift;
+  font-style: bold;
+  font-weight: 800;
+}
+
+.menu-item:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.menu-item-selected:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+
+.login-div{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+  margin-right: 0px;
+}
+.login-div:hover{
+  background-color: var(--primary-color);
+  border: 1px solid white;
+
+}
+
+.log:hover{
+  text-decoration: none;
+  color: white;
+
+}
+
+.gape{
+  height: 140px;
+}
+
+
+
+.course-div-pc{
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+.div-left{
+  width: 50%;
+
+}
+
+.fill-button{
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 0px;
+  padding-top: 20px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
+  transition: 0.5s;
+  border: 1px solid var(--primary-color);
+}
+
+.primary-button{
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  padding-left: 40px;
+  padding-right: 40px;
+  color: var(--primary-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.5s;
+}
+
+.primary-button:hover{
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid white;
+}
+
+
+.fill-button:hover{
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+
+}
+
+.course-div-pc{
+  display: flex;
+}
+
+
+.div-right{
+  padding-left: 150px;
+}
+
+
+.vid-div{
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px var(--shadow-color);
+  width: 350px;
+  height: auto;
+}
+
+.vid{
+  width: 100%;
+  height: 300px;
+  padding-top: -20px;
+  height: auto;
+  border-radius: 20px 20px 20px 20px;
+
+}
+
+.details-div-pc{
+  display: flex;
+}
+
+.details-pc-1{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 150px;
+  padding-top: 30px;
+
+}
+
+.process-div-pc{
+  width: 80%;
+  box-shadow: 0px 8px 20px #ebebeb;
+  height:auto;
+  padding-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
+  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  margin-top: 100px;
+
+}
+
+
+.include-line{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+
+  body{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  h1 {
+    font-size: 7rem !important;
+  }
+
+  h2 {
+    font-size: 5rem !important;
+  }
+
+  h3 {
+    font-size: 3rem !important;
+  }
+
+  h4 {
+    font-size: 2.4rem !important;
+  }
+
+  h5 {
+    font-size: 1.5rem !important;
+  }
+
+  .menu-icon-div{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+  }
+
+
+  .menu{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    display: none;
+    position: fixed;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .menu-item-selected-phone{
+    color: var(--primary-color);
+    font-size: 5rem !important;
+  }
+
+  .menu-item-phone{
+    color: grey;
+    font-size: 4rem !important;
+  }
+
+  .login-div{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+
+
+  .toolbar-pc{
+    display: none;
+  }
+
+
+
+  .toolbar-phone{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 10px 10px 10px var(--shadow-color);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+
+
+  .gape{
+    height: 230px;
+  }
+
+
+
+  .menu-icon-div{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-right: 50px;
+    background-color: var(--secondary-color);
+    box-shadow: 10px 10px 10px var(--shadow-color);
+  }
+
+
+
+  .div-right{
+    display: none;
+  }
+
+
+  .div-left{
+    width: 100%;
+  }
+
+
+  .process-div-pc{
+    display: none;
+  }
+
+  .course-div-pc{
+    display: none;
+  }
+
+  .vid-div-phone{
+    width: 89%;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: auto;
+    box-shadow: 0px 8px 20px #ebebeb;
+    border-radius: 20px;
+  }
+
+  .content{
+    padding-left: 5%;
+    padding-top: 50px;
+    padding-right: 5%;
+  }
+
+
+}
