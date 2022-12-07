@@ -431,12 +431,31 @@ h6 {
     margin-top: 50px;
     background-color: var(--secondary-color);
     padding: 50px;
-    margin-bottom: 500px;
+    border-radius: 20px;
+    margin-bottom: 100px;
   }
 
   .include-line{
     align-items: center;
     margin-top: 20px;
+  }
+
+
+  .details-phone-1{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    padding-top: 30px;
+    margin-right: 50px;
+
+  }
+
+  .details-div-pc{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 200px;
   }
 
 
