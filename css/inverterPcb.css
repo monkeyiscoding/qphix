@@ -254,6 +254,25 @@ h6 {
   display: flex;
 }
 
+.process-div-phone{
+  display: none;
+}
+
+.details-div-phone{
+  display: none;
+}
+
+.about-training-div-phone{
+  display: none;
+}
+
+.bottom-button{
+  display: none;
+}
+
+.vid-div-phone{
+  display: none;
+}
 
 
 
@@ -406,6 +425,11 @@ h6 {
     height: auto;
     box-shadow: 0px 8px 20px #ebebeb;
     border-radius: 20px;
+    display: block;
+  }
+
+  .process-div-phone{
+    display: block;
   }
 
   .content{
@@ -421,6 +445,7 @@ h6 {
     color: white;
     bottom: 0px;
     height: 150px;
+    display: block;
     border: 0px;
   }
 
@@ -433,6 +458,7 @@ h6 {
     padding: 50px;
     border-radius: 20px;
     margin-bottom: 100px;
+    display: block;
   }
 
   .include-line{
@@ -461,6 +487,7 @@ h6 {
   .about-training-div-phone{
     width: 90%;
     margin-left: 5%;
+    display: block;
     margin-right: 5%;
     border-radius: 20px;
     border: 1px solid black;
