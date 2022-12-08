@@ -458,5 +458,15 @@ h6 {
     margin-bottom: 200px;
   }
 
+  .about-training-div-phone{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 50px;
+    margin-bottom: 200px;
+  }
+
 
 }
