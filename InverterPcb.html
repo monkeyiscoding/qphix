@@ -80,7 +80,7 @@
 
   </div> -->
 
-  <div style="height: 80px;" class="gape">
+  <div class="gape">
 
   </div>
 
@@ -93,7 +93,7 @@
 
       <div class="buttons-pc">
 
-        <button class="fill-button" type="button" name="button">
+        <button id="register" class="fill-button" type="button" name="button">
           <h3> Register Now</h3>
         </button>
         <button style="margin-top: 0px; padding-top: 19px; border-radius: 10px; margin-left: 10px;" class="primary-button" type="button" name="button">
@@ -239,7 +239,7 @@
   </div>
 
 
-  <div class="details-div-pc">
+  <div class="details-div-phone-new">
 
     <div class="details-phone-1">
       <i style="color: #FF6F00; margin-bottom: 10px;" class="fa-solid fa-house fa-3x"></i>
@@ -262,9 +262,10 @@
 
   <div class="about-training-div-phone">
     <h2 style="margin-bottom: 50px;">About Training</h2>
-
-    <h3>Thanks for choosing Qphix.. 🙏 <br>
+    <br>
+    <h3 style="font-weight: 400;">Thanks for choosing Qphix.. 🙏 <br>
       <br>
+
       Domestic appliances Pcb repair course with prectical -what is included. (Inverter / non inverter). <br>
 
       <br>
@@ -327,17 +328,47 @@
 
 
 
-    </h3 >
+    </h3>
   </div>
 
-  <button class="bottom-button" type="button" name="button">
+
+  <button id="register-phone" class="bottom-button" type="button" name="button">
     <h3>Register Now</h3>
-
-
   </button>
 
 
+  <div id="dialog" class="dialog">
 
+    <div id="content" class="content">
+      <a id="close" class="close-button-pc" onclick="myFunction()"><i style="color: black;" class="fa-solid fa-xmark close fa-2x"></i></a>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Select training month</h2>
+      <br>
+  
+
+      <div id="dialog-content" class="dialog-content">
+
+      </div>
+      <br>
+      <br>
+
+    </div>
+
+
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="java/inverterPcb.js" charset="utf-8"></script>
 
 
 
