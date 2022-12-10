@@ -48,7 +48,7 @@ query.once('value', function(snapshot) {
           <br>
           <br>
           <br>
-          <button style="width: 100%; ;display: ${btn};padding-top: 15px;" class="primary-button" type="button" name="button"> <h3>Select Month</h3> </button>
+          <button style="width: 100%; ;display: ${btn};" class="primary-button month-button" type="button" name="button"> <h3>Select Month</h3> </button>
         </div>
 
 

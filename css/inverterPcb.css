@@ -355,6 +355,12 @@ h6 {
 }
 
 
+.month-button{
+  padding-top: 15px;
+
+}
+
+
 
 
 
@@ -578,18 +584,24 @@ h6 {
     height: 80px;
   }
 
+  .dialog{
+    padding: 20px;
+  }
+
 
   .dialog-content{
+    width: 100%;
     display: block;
     background-color: white;
     justify-content: center;
     text-align: center;
+    padding: 0px;
     align-items: center;
   }
 
   .content{
     height: auto;
-    width: auto;
+    width: 100%;
     background-color: white;
     justify-content: center;
     text-align: center;
@@ -600,6 +612,7 @@ h6 {
   .month-div-pc{
     height: auto;
     width: 90%;
+    height: 1100px;
     box-shadow: 0px 8px 20px #ebebeb;
     padding-top: 60px;
     margin-top: 100px;
@@ -610,12 +623,11 @@ h6 {
     background-color: var(--primary-color);
     border-radius: 10px;
     width: auto;
-
     box-shadow: 0px 8px 20px #ebebeb;
     margin-left: 70px;
     margin-right: 70px;
     padding-top: 15px;
-    margin-top: 50px;
+    margin-top: 150px;
     color: white;
 
   }
@@ -632,7 +644,11 @@ h6 {
   }
 
 
-
+  .month-button{
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin-top: 40px;
+  }
 
 
 
