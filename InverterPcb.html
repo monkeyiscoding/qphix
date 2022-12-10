@@ -362,10 +362,88 @@
   </div>
 
 
+  <div id="dialog-booking" class="dialog">
+
+    <div id="content" class="content">
+      <a id="close-booking" class="close-button-pc" onclick="myFunction()"><i style="color: black;" class="fa-solid fa-xmark close fa-2x"></i></a>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 id="title-text"></h2>
+      <br>
+
+      <div id="dialog-content" class="dialog-content">
+
+        <div class="image-take-div">
+          <a href="#">
+            <div id="aadhar-div" class="aadhar-div">
+              <i id="icon-aadhar" class="fa-solid fa-plus fa-2x"></i>
+              <h4 id="title-aadhar">Aadhar image</h4>
+
+              <div id="display-image-aadhar" class="image">
+
+              </div>
+
+              <a href="#">
+                <input title="" style="text-align: center; width: 100px;" type="file" id="image-input-aadhar" accept="image/jpeg, image/png, image/jpg">
+
+              </a>
+            </div>
+          </a>
+
+
+          <a href="#">
+            <div id="selfi-div" class="selfi-div">
+              <i id="icon" class="fa-solid fa-plus fa-2x"></i>
+              <h4 id="title">Selfie image</h4>
+
+              <div id="display-image" class="image">
+
+              </div>
+
+              <a href="#">
+                <input title="" style="text-align: center; width: 100px;" type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+
+              </a>
+            </div>
+
+
+          </a>
+
+
+
+        </div>
+
+
+      </div>
+      <br>
+      <br>
+
+      <h3 class="form-title">Fill Form</h3>
+
+      <input class="edit-text-pc" type="text" name="" value="" placeholder="Full Name">
+      <input class="edit-text-pc" type="number" name="" value="" placeholder="Phone Number">
+      <input class="edit-text-pc" type="text" name="" value="" placeholder="Email">
+      <input class="edit-text-pc" type="text" name="" value="" placeholder="Your Address">
+
+      <br>
+      <br><br>
+      <button id="register-seat" class="primary-button" type="button" name="button">PAY & REGISTER SEAT</button>
+    </div>
+
+
+
+  </div>
+
+
+
+
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
-
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="java/inverterPcb.js" charset="utf-8"></script>

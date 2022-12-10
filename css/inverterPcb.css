@@ -285,7 +285,7 @@ h6 {
   /* Stay in place */
   z-index: 10;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 50px;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -359,6 +359,112 @@ h6 {
   padding-top: 15px;
 
 }
+
+
+.image-take-div{
+  display: flex;
+}
+
+.aadhar-div{
+  width: 300px;
+  height: 220px;
+  border: 1px dashed black;
+  margin-right: 50px;
+  margin-left: 50px;
+  align-items: center;
+  padding-top: 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.selfi-div{
+  width: 300px;
+  height: 220px;
+  border: 1px dashed black;
+  margin-right: 50px;
+  margin-left: 50px;
+  align-items: center;
+  padding-top: 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+
+input[type="file"] {
+   border:2px solid white;
+   box-sizing:border-box;
+   display:inline-block;
+   font-size:15px;
+   width: 100px;
+   margin:0;
+   padding:9px;
+   box-shadow: 0px 8px 20px #ebebeb;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   position:relative;
+   background-color:var(--primary-color);
+   -webkit-appearance:none;<!--from   ww w  .  j a  v a  2 s.c  o  m-->
+   -webkit-box-sizing:border-box;
+   z-index:2;
+}
+
+
+input[type="file"]:after {
+   background-color:white;
+   content:'';
+   display:block;
+   height:100%;
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   z-index:11;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+   background:white;
+   color:OrangeRed;
+   font:inherit;
+   padding:0;
+   position:relative;
+   border:none;
+   text-align:left;
+   position:relative;
+   z-index:100;
+   -webkit-appearance:none;
+}
+
+
+
+.image{
+  width: 220px;
+  height: 100px;
+  background-size: 220px 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+
+.edit-text-pc{
+  width: 700px;
+  height: 55px;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.form-title{
+
+}
+
+
+
+
 
 
 
@@ -640,15 +746,18 @@ h6 {
     background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0px 8px 20px #ebebeb;
-    margin-top: 200px;
+    margin-top: 300px;
     margin-bottom: 100px;
+    padding-top: 60px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
 
   .month-button{
-    padding-top: 35px;
-    padding-bottom: 25px;
-    margin-top: 40px;
+    padding-top: 45px;
+    padding-bottom: 35px;
+    margin-top: 90px;
   }
 
 

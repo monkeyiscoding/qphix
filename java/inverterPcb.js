@@ -25,7 +25,7 @@ query.once('value', function(snapshot) {
 
       var btn = "block";
 
-      if(bookings >= 50){
+      if (bookings >= 50) {
         btn = "none";
       }
 
@@ -38,6 +38,8 @@ query.once('value', function(snapshot) {
           <br>
           <h2 style="color: #FF6F00;">${title}</h2>
 
+
+
           <h4>Select the training month is best for you</h4>
           <div class="members-div-pc">
             <h4>Members</h4>
@@ -48,10 +50,8 @@ query.once('value', function(snapshot) {
           <br>
           <br>
           <br>
-          <button style="width: 100%; ;display: ${btn};" class="primary-button month-button" type="button" name="button"> <h3>Select Month</h3> </button>
+          <button style="width: 100%; ;display: ${btn};" class="primary-button month-button" type="button" name="button" onclick="fillForm(\`` + date + `\`)"> <h3>Select Month</h3> </button>
         </div>
-
-
 
 
 
@@ -77,6 +77,98 @@ $("#close").click(function() {
   $("#dialog").fadeOut();
 })
 
-function myFunction(text){
-  $("#dialog").fadeOut();
+$("#close-booking").click(function() {
+  $("#dialog-booking").fadeOut();
+})
+
+function fillForm(text) {
+  $("#title-text").html(`REGISTER YOUR SEAT FOR ${text}`)
+  $("#dialog-booking").fadeIn();
+}
+
+
+
+
+
+
+const image_input = document.querySelector("#image-input");
+
+image_input.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    $("#icon").css("display", "none");
+    $("#title").css("display", "none");
+    $("#selfi-div").css("padding-top", "20px");
+    $("#display-image").css("display", "block");
+
+    const uploaded_image = reader.result;
+    document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+const image_input_aadhar = document.querySelector("#image-input-aadhar");
+
+image_input_aadhar.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    $("#icon-aadhar").css("display", "none");
+    $("#title-aadhar").css("display", "none");
+    $("#aadhar-div").css("padding-top", "20px");
+    $("#display-image-aadhar").css("display", "block");
+
+    const uploaded_image = reader.result;
+    document.querySelector("#display-image-aadhar").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+
+
+
+
+
+
+
+// razor PAY
+
+var options = {
+  "key": "rzp_live_25RshOlv3jiE3w", // Enter the Key ID generated from the Dashboard
+  "amount": "300000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+  "currency": "INR",
+  "name": "Qphix",
+  "description": "Training Registration",
+  "image": "image/logo_black.png",
+  "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+  "handler": function(response) {
+    if (typeof response.razorpay_payment_id == 'undefined' || response.razorpay_payment_id < 1) {
+      alert("Failed");
+    } else {
+      alert("Thanks");
+    }
+    location.href = redirect_url;
+  },
+
+  "prefill": {
+    "name": "Gaurav Kumar",
+    "email": "gaurav.kumar@example.com",
+    "contact": "9999999999"
+  },
+
+  "notes": {
+    "address": "Jaipur Rajasthan"
+  },
+  "theme": {
+    "color": "#FF6F00"
+  }
+};
+
+
+
+var rzp1 = new Razorpay(options);
+document.getElementById('register-seat').onclick = function(e) {
+  rzp1.open();
+  e.preventDefault();
 }
