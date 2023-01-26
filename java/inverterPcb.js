@@ -12,16 +12,24 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 var query = firebase.database().ref("training_months");
+var query2 = firebase.database().ref("Registrations");
 
+
+var code = "";
 query.once('value', function(snapshot) {
+
   snapshot.forEach(
+
     function(childSnapshot) {
+
       var mydiv = document.getElementById("dialog-content");
 
       var title = childSnapshot.val().title;
       var date = childSnapshot.val().date;
       var bookings = childSnapshot.val().booking_count;
       var thumbnail = childSnapshot.val().thumbnail;
+      var month_count = childSnapshot.val().month_count;
+      var month_key = childSnapshot.val().key;
 
 
       var btn = "block";
@@ -51,7 +59,7 @@ query.once('value', function(snapshot) {
           <br>
           <br>
           <br>
-          <button style="width: 100%; ;display: ${btn};" class="primary-button month-button" type="button" name="button" onclick="fillForm(\`` + date + `\`)"> <h3>Select Month</h3> </button>
+          <button style="width: 100%; ;display: ${btn};" class="primary-button month-button" type="button" name="button" onclick="fillForm(\`` + date + `\`,\`` + bookings + `\`,\`` + month_count + `\`,\`` + month_key + `\`,\`` + title + `\`)"> <h3>Select Month</h3> </button>
         </div>
 
 
@@ -83,15 +91,40 @@ $("#close-booking").click(function() {
 })
 
 var month = "";
-function fillForm(text) {
+var month_count = "";
+var month_key = "";
+var count = "";
+var month_title = "";
+
+function fillForm(text,digit,mc,key,title) {
+  month_key = key;
+  month_title = title;
+  //localStorage.setItem("lastname", "Smith");
+  var login = localStorage.getItem("login");
+  var createCount = parseInt(digit) + 1;
+
+  if(digit <10){
+    count = "0"+createCount.toString();
+  }
+  if(digit >=10){
+    count = createCount.toString();
+  }
+
+  if(mc <10){
+    month_count = "0"+mc.toString();
+  }
+  if(mc >=10){
+    month_count = mc.toString();
+  }
+
+
 
   month = text;
+
   $("#title-text").html(`REGISTER YOUR SEAT FOR ${text}`)
   $("#dialog-booking").fadeIn();
 
 }
-
-
 
 
 
@@ -253,7 +286,8 @@ function saveData() {
     if (error) {
       alert("Something went wrong try again");
     } else {
-      uploadimage(key)
+
+      uploadimage(key);
     }
   })
 
@@ -261,6 +295,7 @@ function saveData() {
 
 
 function uploadimage(key) {
+
 
   var name = $("#username").val();
   var phone = $("#phone").val();
@@ -297,7 +332,7 @@ function uploadimage(key) {
         var myRef = firebase.database().ref().push();
 
 
-
+        var code = "QPBX50-"+month_count.toString()+count.toString();
         firebase.database().ref("Registrations/" + key).set({
           aadhar: aadharUrl,
           selfie: selfiUrl,
@@ -306,11 +341,14 @@ function uploadimage(key) {
           email: email,
           address: address,
           month: month,
+          training_id: code,
 
         }, function(error) {
           if (error) {
-
+            alert("Something went wrong");
           } else {
+            localStorage.setItem("booking", "true");
+            localStorage.setItem("booking_id", "QPBX50-");
             $("#loader").fadeOut();
             $("#dialog-booking").fadeOut();
             $("#dialog").fadeOut();
@@ -318,8 +356,16 @@ function uploadimage(key) {
             document.getElementById("phone").value = "";
             document.getElementById("email").value = "";
             document.getElementById("address").value = "";
+            firebase.database().ref("training_months/" + month_key).set({
+              booking_count: parseInt(count),
+              date: month,
+              key: month_key,
+              title: month_title,
+            })
+
             window.close();
             window.open("index.html");
+
 
           }
         })
