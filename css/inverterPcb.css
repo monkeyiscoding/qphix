@@ -474,32 +474,6 @@ input[type="file"]::-webkit-file-upload-button {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1100px) {
   body {
     padding-left: 0px;
@@ -525,6 +499,7 @@ input[type="file"]::-webkit-file-upload-button {
   h5 {
     font-size: 1.5rem !important;
   }
+
 
   .menu-icon-div {
     width: 120px;
@@ -759,7 +734,6 @@ input[type="file"]::-webkit-file-upload-button {
     padding-top: 60px;
     padding-right: 50px;
     padding-left: 50px;
-
   }
 
   .month-button {
@@ -769,17 +743,22 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .edit-text-pc {
-    width: 80%;
-    height: 105px;
-    padding-left: 20px;
-    margin-top: 20px;
-    font-size: 30px;
+    font-size: 15px;
+    color: #555;
+    border-radius: 5px;
     margin-right: 10%;
+    font-family: bahnschrift;
     margin-left: 10%;
-    border-radius: 10px;
+    width: 80%;
+    height: 120px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 24px;
+    border: 1px solid gray;
   }
 
-  .primary-button-register{
+  .primary-button-register {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -788,21 +767,43 @@ input[type="file"]::-webkit-file-upload-button {
     font-size: 40px;
     font-weight: bold;
     background-color: var(--primary-color);
-    color: white;border-radius: 10px;
+    color: white;
+    border-radius: 10px;
     box-shadow: 3px 3px 10px #d6d4d4;
   }
 
-  .aadhar-div{
+  .aadhar-div {
+    height: 400px;
     margin-left: 100px;
+    border-radius: 20px;
   }
 
-.img-title{
-  font-size: 2rem !important;
-  margin-bottom: 20px;
-}
+  .selfi-div {
+    height: 400px;
+    margin-left: 60px;
+    border-radius: 20px;
+  }
 
-.month-title{
-  font-size: 3.5rem !important;
-  margin-top: 50px;
-}
+  .img-title {
+    font-size: 2rem !important;
+    margin-bottom: 120px;
+    margin-top: 40px;
+  }
+
+  .month-title {
+    font-size: 3.5rem !important;
+    margin-top: 50px;
+  }
+  .image{
+    height: 250px;
+    background-size: cover;
+    box-shadow: 1px 1px 1px gray;
+  }
+  .input-file {
+    font-size: 2rem !important;
+    width: auto;
+
+
+  }
+
 }
