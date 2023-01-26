@@ -271,7 +271,7 @@ function uploadimage(key) {
   var myRef = firebase.database().ref().push();
 
   var key2 = myRef.key;
-  var key3 = myRef.key;
+  var key3 = myRef.key+"2_selfie";
 
 
   var file = document.getElementById("image-input-aadhar").files[0];
@@ -292,7 +292,7 @@ function uploadimage(key) {
     thisref.snapshot.ref.getDownloadURL().then(function(downloadURL) {
       //getting url of image
       var aadharUrl = downloadURL;
-      thisref2.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+      thisref2.snapshot.ref.getDownloadURL().then(function(selfiUrl) {
         //getting url of image
         var myRef = firebase.database().ref().push();
 
@@ -300,7 +300,7 @@ function uploadimage(key) {
 
         firebase.database().ref("Registrations/" + key).set({
           aadhar: aadharUrl,
-          selfie: downloadURL,
+          selfie: selfiUrl,
           username: name,
           phone: phone,
           email: email,

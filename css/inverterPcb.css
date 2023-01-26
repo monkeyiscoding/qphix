@@ -759,6 +759,7 @@ input[type="file"]::-webkit-file-upload-button {
     padding-top: 60px;
     padding-right: 50px;
     padding-left: 50px;
+
   }
 
   .month-button {
@@ -785,11 +786,23 @@ input[type="file"]::-webkit-file-upload-button {
     height: 130px;
     margin-bottom: 100px;
     font-size: 40px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;border-radius: 10px;
+    box-shadow: 3px 3px 10px #d6d4d4;
   }
 
   .aadhar-div{
     margin-left: 100px;
   }
 
+.img-title{
+  font-size: 2rem !important;
+  margin-bottom: 20px;
+}
 
+.month-title{
+  font-size: 3.5rem !important;
+  margin-top: 50px;
+}
 }
