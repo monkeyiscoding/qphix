@@ -232,6 +232,7 @@ h6 {
   box-shadow: 4px 8px 10px #ebebeb;
   margin-right: 50px;
   align-items: center;
+  border-radius: 10px;
   text-align: center;
   padding-top: 30px;
 
@@ -243,6 +244,7 @@ h6 {
   box-shadow: 4px 8px 10px #ebebeb;
   margin-left: 50px;
   margin-right: 50px;
+  border-radius: 10px;
   align-items: center;
   text-align: center;
   padding-top: 30px;
@@ -254,6 +256,7 @@ h6 {
   width: 250px;
   box-shadow: 4px 8px 10px #ebebeb;
   margin-left: 50px;
+  border-radius: 10px;
   align-items: center;
   text-align: center;
   padding-top: 30px;
@@ -515,6 +518,7 @@ h6 {
   box-shadow: 0px 8px 20px #ebebeb;
   margin-right: 50px;
   align-items: center;
+  border-radius: 15px;
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
@@ -529,6 +533,7 @@ h6 {
   margin-right: 50px;
   align-items: center;
   text-align: center;
+  border-radius: 15px;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 30px;
@@ -544,6 +549,7 @@ h6 {
   margin-right: 50px;
   align-items: center;
   text-align: center;
+  border-radius: 15px;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 30px;

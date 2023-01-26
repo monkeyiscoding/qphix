@@ -314,6 +314,13 @@ function uploadimage(key) {
             $("#loader").fadeOut();
             $("#dialog-booking").fadeOut();
             $("#dialog").fadeOut();
+            document.getElementById("username").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("address").value = "";
+            window.close();
+            window.open("index.html");
+
           }
         })
 
