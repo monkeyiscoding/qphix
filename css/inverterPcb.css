@@ -769,7 +769,7 @@ input[type="file"]::-webkit-file-upload-button {
 
   .edit-text-pc {
     width: 80%;
-    height: 85px;
+    height: 105px;
     padding-left: 20px;
     margin-top: 20px;
     font-size: 30px;
@@ -782,12 +782,14 @@ input[type="file"]::-webkit-file-upload-button {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    height: 80px;
+    height: 130px;
     margin-bottom: 100px;
-    font-size: 30px;
+    font-size: 40px;
   }
+
   .aadhar-div{
     margin-left: 100px;
   }
+
 
 }
