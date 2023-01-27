@@ -52,14 +52,29 @@ $("#signup").click(function() {
   // }
 
    else {
-    phoneAuth()
+
+
+     phoneAuth()
+
   }
 })
 
 // function for send OTP
 function phoneAuth() {
+  var number = "";
+  var numberPreview = $("#number").val();
 
-  var number = "+917357711568"
+
+  if(numberPreview.startsWith("0")){
+    numberPreview = numberPreview.slice(1);
+  }
+
+
+  if(numberPreview.indexOf("+91") < 1){
+    number = "+91"+numberPreview
+  }
+
+
   firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function(confirmationResult) {
     window.confirmationResult = confirmationResult;
     coderesult = confirmationResult;
