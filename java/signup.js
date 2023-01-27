@@ -31,15 +31,15 @@ $("#signup").click(function(){
 
   if(name.trim().length == 0){
     $("#error").html("Enter your username");
-    $("#error").fadeIn();
+    $("#error").css("visibility","visible");
   }
   else if(number.trim().length == 0){
     $("#error").html("Enter Your Phone Number");
-    $("#error").fadeIn();
+    $("#error").css("visibility","visible");
   }
   else if(number.trim().length < 10){
     $("#error").html("Invalid Phone Number");
-    $("#error").fadeIn();
+    $("#error").css("visibility","visible");
   }
 
   else{
