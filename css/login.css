@@ -96,6 +96,11 @@ h6 {
   display: none;
 }
 
+.recaptcha-container{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
 
 @media (max-width: 1100px) {
@@ -185,5 +190,11 @@ h6 {
   }
 
 
+  .recaptcha-container{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 50px;
+  }
 
 }

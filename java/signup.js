@@ -54,11 +54,13 @@ function phoneAuth() {
     firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
         window.confirmationResult = confirmationResult;
         coderesult = confirmationResult;
+        $("#error").fadeOut();
         $("#verify").fadeIn();
         $("#otp").fadeIn();
         $("#number").fadeOut();
         $("#username").fadeOut();
         $("#signup").fadeOut();
+        $("#recaptcha-container").fadeOut();
     }).catch(function (error) {
         // error in sending OTP
         $("#error").html(error.message);
