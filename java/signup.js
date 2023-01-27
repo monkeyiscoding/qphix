@@ -21,35 +21,62 @@ function render() {
 }
 
 
+
+
+
+
+
 $("#signup").click(function(){
   var name = $("#username").val();
-  var password = $("#password").val();
-  var conform_password = $("#conform_password").val();
-
+  var number = $("#number").val();
 
   if(name.trim().length == 0){
     $("#error").html("Enter your username");
     $("#error").fadeIn();
   }
-  else if(password.trim().length == 0){
-    $("#error").html("Enter Password");
+  else if(number.trim().length == 0){
+    $("#error").html("Enter Your Phone Number");
     $("#error").fadeIn();
   }
-  else if(password.indexOf(" ") >= 1){
-    $("#error").html("Space not allow in password");
-    $("#error").fadeIn();
-  }
-  else if(password.length < 8){
-    $("#error").html("Password must be 8 character");
-    $("#error").fadeIn();
-  }
-
-  else if(password != conform_password){
-    $("#error").html("Password not matched");
+  else if(number.trim().length < 10){
+    $("#error").html("Invalid Phone Number");
     $("#error").fadeIn();
   }
 
   else{
-
+    phoneAuth()
   }
 })
+
+// function for send OTP
+function phoneAuth() {
+
+    var number = document.getElementById('number').value;
+    firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
+        window.confirmationResult = confirmationResult;
+        coderesult = confirmationResult;
+        $("#verify").fadeIn();
+        $("#otp").fadeIn();
+        $("#number").fadeOut();
+        $("#username").fadeOut();
+        $("#signup").fadeOut();
+    }).catch(function (error) {
+        // error in sending OTP
+        $("#error").html(error.message);
+        $("#error").fadeIn();
+    });
+
+}
+
+$("#verify").click(function(){
+  codeverify()
+})
+
+function codeverify() {
+    var code = document.getElementById('otp').value;
+    coderesult.confirm(code).then(function () {
+        alert("verifird");
+    }).catch(function () {
+        alert("wrong");
+    })
+}
