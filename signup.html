@@ -21,18 +21,18 @@
       <br>
       <br>
 
-      <input class="input100" type="text" name="" value="" placeholder="Username">
+      <input id="username" class="input100" type="text" name="" value="" placeholder="Username">
       <br>
-      <input class="input100" type="password" name="" value="" placeholder="Password">
+      <input id="password" class="input100" type="password" name="" value="" placeholder="Create Password">
       <br>
-      <input class="input100" type="password" name="" value="" placeholder="Conform Password">
+      <input id="conform_password" class="input100" type="password" name="" value="" placeholder="Conform Password">
+      <h3 id="error" class="error">Invalid Username</h3>
+      <br>
+      <br>
+      <br>
+      <br>
 
-      <br>
-      <br>
-      <br>
-      <br>
-
-      <button class="button-primary" type="button" name="button">Create Account</button>
+      <button id="signup" class="button-primary" type="button" name="button">Create Account</button>
       <br>
       <br>
       <br>
@@ -40,10 +40,15 @@
 
     </div>
   </div>
+  <div id="recaptcha-container"></div>
 
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="java/login.js" charset="utf-8"></script>
+  <script src="java/signup.js" charset="utf-8"></script>
 
 
 </body>

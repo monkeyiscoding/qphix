@@ -101,28 +101,35 @@ function fillForm(text,digit,mc,key,title) {
   month_title = title;
   //localStorage.setItem("lastname", "Smith");
   var login = localStorage.getItem("login");
-  var createCount = parseInt(digit) + 1;
 
-  if(digit <10){
-    count = "0"+createCount.toString();
+  if(login == "true"){
+    var createCount = parseInt(digit) + 1;
+
+    if(digit <10){
+      count = "0"+createCount.toString();
+    }
+    if(digit >=10){
+      count = createCount.toString();
+    }
+
+    if(mc <10){
+      month_count = "0"+mc.toString();
+    }
+    if(mc >=10){
+      month_count = mc.toString();
+    }
+
+
+
+    month = text;
+
+    $("#title-text").html(`REGISTER YOUR SEAT FOR ${text}`)
+    $("#dialog-booking").fadeIn();
+
   }
-  if(digit >=10){
-    count = createCount.toString();
+  else{
+    window.location.replace("login.html");
   }
-
-  if(mc <10){
-    month_count = "0"+mc.toString();
-  }
-  if(mc >=10){
-    month_count = mc.toString();
-  }
-
-
-
-  month = text;
-
-  $("#title-text").html(`REGISTER YOUR SEAT FOR ${text}`)
-  $("#dialog-booking").fadeIn();
 
 }
 

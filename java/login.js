@@ -1,11 +1,8 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+$("#login").click(function() {
+  var name = $("#username").val();
+	var password = $("#password").val();
+
+	alert(password);
+})
