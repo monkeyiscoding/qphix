@@ -50,14 +50,14 @@ $("#signup").click(function() {
   //   $("#error").html("Verifi recaptcha");
   //   $("#error").css("visibility", "visible");
   // }
+  else {
 
-   else {
 
-
-     phoneAuth()
+    phoneAuth()
 
   }
 })
+
 
 // function for send OTP
 function phoneAuth() {
@@ -65,20 +65,20 @@ function phoneAuth() {
   var numberPreview = $("#number").val();
 
 
-  if(numberPreview.startsWith("0")){
+  if (numberPreview.startsWith("0")) {
     numberPreview = numberPreview.slice(1);
   }
 
 
-  if(numberPreview.indexOf("+91") < 1){
-    number = "+91"+numberPreview
+  if (numberPreview.indexOf("+91") < 1) {
+    number = "+91" + numberPreview
   }
 
 
   firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function(confirmationResult) {
     window.confirmationResult = confirmationResult;
     coderesult = confirmationResult;
-    $("#error").fadeOut();
+    $("#error").css("visibility", "hidden");
     $("#verify").fadeIn();
     $("#otp").fadeIn();
     $("#number").fadeOut();
@@ -88,7 +88,7 @@ function phoneAuth() {
   }).catch(function(error) {
     // error in sending OTP
     $("#error").html(error.message);
-    $("#error").fadeIn();
+    $("#error").css("visibility", "visible");
   });
 
 }
@@ -98,10 +98,43 @@ $("#verify").click(function() {
 })
 
 function codeverify() {
+  var number = "";
+  var name = $("#username").val();
+  var numberPreview = $("#number").val();
+
+
+  if (numberPreview.startsWith("0")) {
+    numberPreview = numberPreview.slice(1);
+  }
+
+
+  if (numberPreview.indexOf("+91") < 1) {
+    number = "+91" + numberPreview
+  }
+
   var code = document.getElementById('otp').value;
   coderesult.confirm(code).then(function() {
-    alert("verifird");
+
+    var ref = firebase.database().ref().push();
+    var key = ref.key;
+
+    firebase.database().ref("WebUsers/"+key).set({
+      name: name,
+      number: numberPreview,
+    }, function(error) {
+      if (error) {
+        alert("Something went wrong try again");
+      } else {
+        localStorage.setItem("login", "true");
+        localStorage.setItem("username", name);
+        localStorage.setItem("number", number);
+        alert("Login Successfully");
+        window.location.replace("index.html");
+      }
+    });
+
   }).catch(function() {
-    alert("wrong");
+    $("#error").html("Invalid OTP");
+    $("#error").css("visibility", "visible");
   })
 }
