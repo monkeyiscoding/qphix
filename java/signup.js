@@ -15,11 +15,10 @@ var query = firebase.database().ref("web_login");
 
 
 render();
-function render() {
-    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-    recaptchaVerifier.render();
+function render(){
+	window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+	recaptchaVerifier.render();
 }
-
 
 
 
@@ -51,7 +50,7 @@ $("#signup").click(function(){
 // function for send OTP
 function phoneAuth() {
 
-    var number = document.getElementById('number').value;
+    var number = "+917357711568"
     firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
         window.confirmationResult = confirmationResult;
         coderesult = confirmationResult;
