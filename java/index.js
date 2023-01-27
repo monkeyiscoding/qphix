@@ -1,4 +1,5 @@
 
+alert("ok");
 var login = localStorage.getItem("login");
 
 if(login == "true"){
