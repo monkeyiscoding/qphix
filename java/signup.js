@@ -46,10 +46,10 @@ $("#signup").click(function() {
     $("#error").html("Invalid Phone Number");
     $("#error").css("visibility", "visible");
   }
-  else if (capta == false) {
-    $("#error").html("Verifi recaptcha");
-    $("#error").css("visibility", "visible");
-  }
+  // else if (capta == false) {
+  //   $("#error").html("Verifi recaptcha");
+  //   $("#error").css("visibility", "visible");
+  // }
 
    else {
     phoneAuth()
