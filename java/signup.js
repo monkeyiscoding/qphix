@@ -13,11 +13,18 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var query = firebase.database().ref("web_login");
 
-
+var capta = false;
 render();
-function render(){
-	window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-	recaptchaVerifier.render();
+
+function render() {
+  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+    'size': 'invisible',
+    'callback': (response) => {
+      // reCAPTCHA solved, allow signInWithPhoneNumber.\
+      capta = true;
+    }
+  });
+  recaptchaVerifier.render();
 }
 
 
@@ -25,24 +32,26 @@ function render(){
 
 
 
-$("#signup").click(function(){
+$("#signup").click(function() {
   var name = $("#username").val();
   var number = $("#number").val();
 
-  if(name.trim().length == 0){
+  if (name.trim().length == 0) {
     $("#error").html("Enter your username");
-    $("#error").css("visibility","visible");
-  }
-  else if(number.trim().length == 0){
+    $("#error").css("visibility", "visible");
+  } else if (number.trim().length == 0) {
     $("#error").html("Enter Your Phone Number");
-    $("#error").css("visibility","visible");
-  }
-  else if(number.trim().length < 10){
+    $("#error").css("visibility", "visible");
+  } else if (number.trim().length < 10) {
     $("#error").html("Invalid Phone Number");
-    $("#error").css("visibility","visible");
+    $("#error").css("visibility", "visible");
+  }
+  else if (capta == false) {
+    $("#error").html("Verifi recaptcha");
+    $("#error").css("visibility", "visible");
   }
 
-  else{
+   else {
     phoneAuth()
   }
 })
@@ -50,34 +59,34 @@ $("#signup").click(function(){
 // function for send OTP
 function phoneAuth() {
 
-    var number = "+917357711568"
-    firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
-        window.confirmationResult = confirmationResult;
-        coderesult = confirmationResult;
-        $("#error").fadeOut();
-        $("#verify").fadeIn();
-        $("#otp").fadeIn();
-        $("#number").fadeOut();
-        $("#username").fadeOut();
-        $("#signup").fadeOut();
-        $("#recaptcha-container").fadeOut();
-    }).catch(function (error) {
-        // error in sending OTP
-        $("#error").html(error.message);
-        $("#error").fadeIn();
-    });
+  var number = "+917357711568"
+  firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function(confirmationResult) {
+    window.confirmationResult = confirmationResult;
+    coderesult = confirmationResult;
+    $("#error").fadeOut();
+    $("#verify").fadeIn();
+    $("#otp").fadeIn();
+    $("#number").fadeOut();
+    $("#username").fadeOut();
+    $("#signup").fadeOut();
+    $("#recaptcha-container").fadeOut();
+  }).catch(function(error) {
+    // error in sending OTP
+    $("#error").html(error.message);
+    $("#error").fadeIn();
+  });
 
 }
 
-$("#verify").click(function(){
+$("#verify").click(function() {
   codeverify()
 })
 
 function codeverify() {
-    var code = document.getElementById('otp').value;
-    coderesult.confirm(code).then(function () {
-        alert("verifird");
-    }).catch(function () {
-        alert("wrong");
-    })
+  var code = document.getElementById('otp').value;
+  coderesult.confirm(code).then(function() {
+    alert("verifird");
+  }).catch(function() {
+    alert("wrong");
+  })
 }
