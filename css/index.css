@@ -546,6 +546,7 @@ h6 {
     align-items: center;
     text-align: center;
     display: none;
+    margin-top: 60px;
   }
 
   .login-logo{
