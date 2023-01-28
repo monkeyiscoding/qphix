@@ -1,17 +1,11 @@
-
 :root {
   --primary-color: #FF6F00;
   --secondary-color: #FBFBFB;
-  --shadow-color:#e6e3e3;
+  --shadow-color: #e6e3e3;
   --font-default: bahnschrift;
 }
 
-
-
-
-
-
-body{
+body {
   padding-left: 10%;
   padding-right: 10%;
   font-family: bahnschrift;
@@ -48,28 +42,26 @@ h6 {
 }
 
 /* toolbar pc */
-
-.toolbar-pc{
+.toolbar-pc {
   width: 100%;
   position: fixed;
   height: 90px;
   background-color: white;
 }
 
-.toolbar-phone{
+.toolbar-phone {
   display: none;
 }
 
-.top-bar-pc{
+.top-bar-pc {
   width: 80%;
   height: 80%;
   display: flex;
   align-items: center;
   text-align: center;
-
 }
 
-.menu-item{
+.menu-item {
   color: black;
   margin-right: 20px;
   font-size: 20px;
@@ -78,7 +70,7 @@ h6 {
   transition: 0.5s;
 }
 
-.menu-item-selected{
+.menu-item-selected {
   color: var(--primary-color);
   margin-right: 20px;
   font-size: 20px;
@@ -98,8 +90,7 @@ h6 {
   text-decoration: none;
 }
 
-
-.login-div{
+.login-div {
   display: flex;
   align-items: center;
   margin-left: 20px;
@@ -110,51 +101,44 @@ h6 {
   border-radius: 10px;
   transition: 0.5s;
 }
-.login-div:hover{
+
+.login-div:hover {
   background-color: var(--primary-color);
   border: 1px solid white;
-
 }
 
-.log:hover{
+.log:hover {
   text-decoration: none;
   color: white;
-
 }
 
-
-.intro-div-pc{
+.intro-div-pc {
   width: 100%;
   height: 800px;
   background-image: url("../images/web_bg.png");
   background-size: cover;
   border-radius: 30px;
   padding: 50px;
-
-
 }
 
-.intro-div-phone{
+.intro-div-phone {
   display: none;
 }
 
-
-.heading{
+.heading {
   color: var(--primary-color);
-  text-shadow:0px 5px 10px var(--shadow-color);
+  text-shadow: 0px 5px 10px var(--shadow-color);
   font-size: 4.4rem !important;
   font-family: bahnschrift;
   margin-top: 50px;
   font-weight: 800;
-
 }
 
-.gape{
+.gape {
   height: 100px;
 }
 
-
-.primary-button{
+.primary-button {
   background-color: white;
   border: 1px solid var(--primary-color);
   padding-left: 40px;
@@ -165,13 +149,13 @@ h6 {
   transition: 0.5s;
 }
 
-.primary-button:hover{
+.primary-button:hover {
   background-color: var(--primary-color);
   color: white;
   border: 1px solid white;
 }
 
-.flying-boy{
+.flying-boy {
   height: 600px;
   position: absolute;
   right: 13%;
@@ -179,12 +163,11 @@ h6 {
   z-index: 1;
 }
 
-
-.verification-div-phone{
+.verification-div-phone {
   display: none;
 }
 
-.verification-div{
+.verification-div {
   background-color: white;
   box-shadow: 5px 5px 5px var(--shadow-color);
   width: 500px;
@@ -197,7 +180,7 @@ h6 {
   align-items: center;
 }
 
-.verify-div-1{
+.verify-div-1 {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -205,7 +188,7 @@ h6 {
   margin-right: 55px;
 }
 
-.verify-div-2{
+.verify-div-2 {
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -213,20 +196,19 @@ h6 {
   margin-left: 55px;
 }
 
-.vert-line{
+.vert-line {
   width: 1px;
   height: 100%;
   background-color: var(--shadow-color);
 }
 
-
-.service-div-pc{
+.service-div-pc {
   display: flex;
   padding: 100px;
   justify-content: center;
 }
 
-.course-div-pc-1{
+.course-div-pc-1 {
   height: 400px;
   width: 250px;
   box-shadow: 4px 8px 10px #ebebeb;
@@ -235,10 +217,9 @@ h6 {
   border-radius: 10px;
   text-align: center;
   padding-top: 30px;
-
 }
 
-.course-div-pc-2{
+.course-div-pc-2 {
   height: 400px;
   width: 250px;
   box-shadow: 4px 8px 10px #ebebeb;
@@ -248,10 +229,9 @@ h6 {
   align-items: center;
   text-align: center;
   padding-top: 30px;
-
 }
 
-.course-div-pc-3{
+.course-div-pc-3 {
   height: 400px;
   width: 250px;
   box-shadow: 4px 8px 10px #ebebeb;
@@ -260,26 +240,22 @@ h6 {
   align-items: center;
   text-align: center;
   padding-top: 30px;
-
-
 }
 
-.course-img{
+.course-img {
   width: 80%;
   border-radius: 30px;
 }
 
-.service-div-phone{
-  display: none;
-
-}
-
-.menu{
+.service-div-phone {
   display: none;
 }
 
+.menu {
+  display: none;
+}
 
-.process-div{
+.process-div {
   width: 80%;
   box-shadow: 0px 8px 20px #ebebeb;
   height: 400px;
@@ -290,11 +266,9 @@ h6 {
   display: flex;
   align-items: center;
   padding-left: 100px;
-
 }
 
-
-.fill-button{
+.fill-button {
   background-color: var(--primary-color);
   color: white;
   border-radius: 10px;
@@ -322,11 +296,11 @@ h6 {
 
 
 
+
+
 /* mobile phone  */
-
 @media (max-width: 1100px) {
-
-  body{
+  body {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -351,7 +325,7 @@ h6 {
     font-size: 1.5rem !important;
   }
 
-  .menu-icon-div{
+  .menu-icon-div {
     width: 120px;
     height: 120px;
     position: absolute;
@@ -359,8 +333,7 @@ h6 {
     top: 50px;
   }
 
-
-  .menu{
+  .menu {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -373,17 +346,26 @@ h6 {
     justify-content: center;
   }
 
-  .menu-item-selected-phone{
+  .menu-item-selected-phone {
     color: var(--primary-color);
     font-size: 5rem !important;
   }
 
-  .menu-item-phone{
+  .menu-item-phone {
     color: grey;
     font-size: 4rem !important;
   }
 
-  .login-div{
+  .login-div-m {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
     width: 30%;
     margin-left: 35%;
     margin-right: 35%;
@@ -395,12 +377,11 @@ h6 {
     padding-bottom: 20px;
   }
 
-
-  .toolbar-pc{
+  .toolbar-pc {
     display: none;
   }
 
-  .toolbar-phone{
+  .toolbar-phone {
     display: flex;
     height: 200px;
     width: 100%;
@@ -412,13 +393,11 @@ h6 {
     background-color: white;
   }
 
-  .gape{
+  .gape {
     height: 230px;
   }
 
-
-
-  .menu-icon-div{
+  .menu-icon-div {
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -428,13 +407,11 @@ h6 {
     box-shadow: 10px 10px 10px var(--shadow-color);
   }
 
-
-  .intro-div-pc{
+  .intro-div-pc {
     display: none;
-
   }
 
-  .intro-div-phone{
+  .intro-div-phone {
     width: 90%;
     height: 2000px;
     margin-left: 5%;
@@ -447,154 +424,141 @@ h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
-
-
   }
 
+  .heading {
+    font-size: 7rem !important;
+  }
 
-.heading{
-  font-size: 7rem !important;
+  .flying-boy-phone {
+    height: 1000px;
+  }
+
+  .verification-div-phone {
+    background-color: white;
+    box-shadow: 5px 5px 5px var(--shadow-color);
+    width: 80%;
+    height: 400px;
+    margin-top: 150px;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .verify-div-1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin-right: 80px;
+  }
+
+  .verify-div-2 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: 80px;
+  }
+
+  .service-div-pc {
+    display: none;
+  }
+
+  .phone-gape {
+    height: 100px;
+  }
+
+  .service-div-phone {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .course-div-phone-1 {
+    height: 1100px;
+    width: 80%;
+    box-shadow: 0px 8px 20px #ebebeb;
+    margin-right: 50px;
+    align-items: center;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 30px;
+  }
+
+  .course-div-phone-2 {
+    height: 1100px;
+    width: 80%;
+    box-shadow: 0px 8px 20px #ebebeb;
+    margin-right: 50px;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 30px;
+    margin-top: 100px;
+  }
+
+  .course-div-phone-3 {
+    height: 1100px;
+    width: 80%;
+    box-shadow: 0px 8px 20px #ebebeb;
+    margin-right: 50px;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 30px;
+    margin-top: 100px;
+  }
+
+  .process-div {
+    display: none;
+  }
+
+  .fill-button {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 400;
+  }
+
+  .login-div-phone{
+    width: 70%;
+    height: 500px;
+    margin-right: 15%;
+    margin-left: 15%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #d9dadb;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+  }
+
+  .login-logo{
+    width: 170px;
+    height: 170px;
+    box-shadow: 5px 5px 3px #d9dadb;
+    border-radius: 1000px;
+    margin: 70px auto 0px auto;
+  }
+
 }
-
-.flying-boy-phone{
-  height: 1000px;
-
-}
-
-.verification-div-phone{
-  background-color: white;
-  box-shadow: 5px 5px 5px var(--shadow-color);
-  width: 80%;
-  height: 400px;
-  margin-top: 150px;
-  border-radius: 20px;
-  margin-left: 10%;
-  margin-right: 10%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-.verify-div-1{
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  margin-right: 80px;
-}
-
-.verify-div-2{
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  margin-left: 80px;
-}
-
-
-.service-div-pc{
-  display: none;
-
-}
-
-.phone-gape{
-  height: 100px;
-}
-
-.service-div-phone{
-  display: block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 100px;
-}
-
-
-.course-div-phone-1{
-  height: 1100px;
-  width: 80%;
-  box-shadow: 0px 8px 20px #ebebeb;
-  margin-right: 50px;
-  align-items: center;
-  border-radius: 15px;
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 30px;
-}
-
-
-.course-div-phone-2{
-  height: 1100px;
-  width: 80%;
-  box-shadow: 0px 8px 20px #ebebeb;
-  margin-right: 50px;
-  align-items: center;
-  text-align: center;
-  border-radius: 15px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 30px;
-  margin-top: 100px;
-
-}
-
-
-.course-div-phone-3{
-  height: 1100px;
-  width: 80%;
-  box-shadow: 0px 8px 20px #ebebeb;
-  margin-right: 50px;
-  align-items: center;
-  text-align: center;
-  border-radius: 15px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 30px;
-  margin-top: 100px;
-
-}
-
-
-.process-div{
-  display: none;
-}
-
-.fill-button{
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  font-weight: 400;
-}
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* animations */
-
 .floating {
   animation-name: floating;
   animation-duration: 2s;
