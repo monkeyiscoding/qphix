@@ -1,4 +1,4 @@
-
+var booking = localStorage.getItem("booking");
 var login = localStorage.getItem("login");
 if(login == "true"){
   var name = localStorage.getItem("username");
