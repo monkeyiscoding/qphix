@@ -51,7 +51,7 @@ $("#signup").click(function() {
   //   $("#error").css("visibility", "visible");
   // }
   else {
-
+    $("#loader").fadeIn();
 
     phoneAuth()
 
@@ -85,15 +85,18 @@ function phoneAuth() {
     $("#username").fadeOut();
     $("#signup").fadeOut();
     $("#recaptcha-container").fadeOut();
+    $("#loader").fadeOut();
   }).catch(function(error) {
     // error in sending OTP
     $("#error").html(error.message);
     $("#error").css("visibility", "visible");
+    $("#loader").fadeOut();
   });
 
 }
 
 $("#verify").click(function() {
+  $("#loader").fadeIn();
   codeverify()
 })
 
@@ -125,6 +128,7 @@ function codeverify() {
       if (error) {
         alert("Something went wrong try again");
       } else {
+        $("#loader").fadeOut();
         localStorage.setItem("login", "true");
         localStorage.setItem("username", name);
         localStorage.setItem("number", number);
@@ -136,5 +140,6 @@ function codeverify() {
   }).catch(function() {
     $("#error").html("Invalid OTP");
     $("#error").css("visibility", "visible");
+      $("#loader").fadeOut();
   })
 }
