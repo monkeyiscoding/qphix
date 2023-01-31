@@ -422,7 +422,9 @@ input[type="file"]::-webkit-file-upload-button {
   margin-top: 20px;
 }
 
-.form-title {}
+.form-title {
+  
+}
 
 .error-form {
   margin-top: 20px;
@@ -473,8 +475,8 @@ input[type="file"]::-webkit-file-upload-button {
   100% {
     transform: rotate(360deg);
   }
-}
 
+}
 
 
 

@@ -28,10 +28,6 @@ function render() {
 }
 
 
-
-
-
-
 $("#signup").click(function() {
   var name = $("#username").val();
   var number = $("#number").val();
@@ -127,6 +123,7 @@ function codeverify() {
     }, function(error) {
       if (error) {
         alert("Something went wrong try again");
+        $("#loader").fadeOut();
       } else {
         $("#loader").fadeOut();
         localStorage.setItem("login", "true");
