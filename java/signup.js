@@ -117,7 +117,7 @@ function codeverify() {
     var ref = firebase.database().ref().push();
     var key = ref.key;
 
-    firebase.database().ref("WebUsers/"+key).set({
+    firebase.database().ref("WebUsers/"+number).set({
       name: name,
       number: numberPreview,
     }, function(error) {

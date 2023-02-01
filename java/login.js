@@ -1,8 +1,81 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyBpRrmTK4449iHbUW_jNE1CjaWYTdmGdaY",
+  authDomain: "qphix-training-193c9.firebaseapp.com",
+  databaseURL: "https://qphix-training-193c9-default-rtdb.firebaseio.com",
+  projectId: "qphix-training-193c9",
+  storageBucket: "qphix-training-193c9.appspot.com",
+  messagingSenderId: "343406672827",
+  appId: "1:343406672827:web:10ca29f861cc2c08a3e29e",
+  measurementId: "G-KMZM22KYZW"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+var query = firebase.database().ref("WebUsers");
+
+var capta = false;
+render();
+
+function render() {
+  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+    'size': 'invisible',
+    'callback': (response) => {
+      // reCAPTCHA solved, allow signInWithPhoneNumber.\
+      capta = true;
+    }
+  });
+  recaptchaVerifier.render();
+}
+
 
 
 $("#login").click(function() {
-  var name = $("#username").val();
-	var password = $("#password").val();
+  var number = $("#phone").val();
 
-	alert(password);
+  if (number.trim().length == 0) {
+    $("#error").html("Enter Your Phone Number");
+    $("#error").css("visibility", "visible");
+  } else if (number.trim().length < 10) {
+    $("#error").html("Invalid Phone Number");
+    $("#error").css("visibility", "visible");
+  }
+  // else if (capta == false) {
+  //   $("#error").html("Verifi recaptcha");
+  //   $("#error").css("visibility", "visible");
+  // }
+  else {
+    $("#loader").fadeIn();
+    checkUser(number);
+  }
 })
+
+
+
+function checkUser(number) {
+  var numberPreview = number;
+
+
+  if (numberPreview.startsWith("0")) {
+    numberPreview = numberPreview.slice(1);
+  }
+
+
+  if (numberPreview.indexOf("+91") < 1) {
+    number = "+91" + numberPreview
+  }
+
+  query.once('value', function(snapshot) {
+
+    if (snapshot.hasChild(number)) {
+      $("#loader").fadeOut();
+      alert('exists');
+    } else {
+      $("#error").html("User not fount");
+      $("#loader").fadeOut();
+      $("#error").css("visibility", "visible");
+    }
+  })
+
+
+
+}
