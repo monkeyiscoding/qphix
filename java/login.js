@@ -68,7 +68,8 @@ function checkUser(number) {
   query.once('value', function(snapshot) {
     if (snapshot.hasChild(number)) {
       $("#loader").fadeOut();
-      phoneAuth();
+      phoneAuth(number);
+      $("#error").css("visibility", "hidden");
     } else {
       $("#error").html("User not fount");
       $("#loader").fadeOut();
@@ -82,19 +83,8 @@ function checkUser(number) {
 
 
 // function for send OTP
-function phoneAuth() {
-  var number = "";
-  var numberPreview = $("#number").val();
+function phoneAuth(number) {
 
-
-  if (numberPreview.startsWith("0")) {
-    numberPreview = numberPreview.slice(1);
-  }
-
-
-  if (numberPreview.indexOf("+91") < 1) {
-    number = "+91" + numberPreview
-  }
 
 
   firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function(confirmationResult) {
@@ -124,8 +114,8 @@ $("#verify").click(function() {
 
 function codeverify() {
   var number = "";
-  var name = $("#username").val();
-  var numberPreview = $("#number").val();
+
+  var numberPreview = $("#phone").val();
 
 
   if (numberPreview.startsWith("0")) {
@@ -143,22 +133,30 @@ function codeverify() {
     var ref = firebase.database().ref().push();
     var key = ref.key;
 
-    firebase.database().ref("WebUsers/"+number).set({
-      name: name,
-      number: numberPreview,
-    }, function(error) {
-      if (error) {
-        alert("Something went wrong try again");
-        $("#loader").fadeOut();
-      } else {
-        $("#loader").fadeOut();
-        localStorage.setItem("login", "true");
-        localStorage.setItem("username", name);
-        localStorage.setItem("number", number);
-        alert("Login Successfully");
-        window.location.replace("index.html");
-      }
-    });
+    var query = firebase.database().ref("WebUsers/"+number);
+
+    query.once('value', function(snapshot) {
+      var name = snapshot.val().username;
+      alert(name);
+    })
+
+
+    // firebase.database().ref("WebUsers/"+number).set({
+    //   name: name,
+    //   number: numberPreview,
+    // }, function(error) {
+    //   if (error) {
+    //     alert("Something went wrong try again");
+    //     $("#loader").fadeOut();
+    //   } else {
+    //     $("#loader").fadeOut();
+    //     localStorage.setItem("login", "true");
+    //     localStorage.setItem("username", name);
+    //     localStorage.setItem("number", number);
+    //     alert("Login Successfully");
+    //     window.location.replace("index.html");
+    //   }
+    // });
 
   }).catch(function() {
     $("#error").html("Invalid OTP");

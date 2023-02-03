@@ -262,7 +262,7 @@ h6 {
   margin-left: 10%;
   margin-right: 10%;
   border-radius: 20px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   display: flex;
   align-items: center;
   padding-left: 100px;
@@ -282,8 +282,37 @@ h6 {
 }
 
 
+.app-div{
+  width: 500px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px #ebebeb;
+  margin-bottom: 100px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 50px;
+
+}
 
 
+.logo-app{
+  height: 100px;
+  width: 100px;
+  margin-top: 30px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.down-img{
+  width: 60%;
+  height: auto;
+}
 
 
 
@@ -557,7 +586,73 @@ h6 {
     margin: 70px auto 0px auto;
   }
 
+
+
+  .app-div{
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px #ebebeb;
+    margin-bottom: 100px;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    justify-content: center;
+    padding-bottom: 50px;
+
+  }
+
+  .logo-app{
+    height: 150px;
+    width: 150px;
+    margin-top: 80px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .down-img{
+    width: 60%;
+    height: auto;
+  }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* animations */
 .floating {
