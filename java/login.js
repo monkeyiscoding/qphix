@@ -136,7 +136,7 @@ function codeverify() {
     var query = firebase.database().ref("WebUsers/"+number);
 
     query.once('value', function(snapshot) {
-      var name = snapshot.val().username;
+      var name = snapshot.val().name;
       alert(name);
     })
 
