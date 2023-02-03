@@ -143,6 +143,7 @@ h6 {
   border: 1px solid var(--primary-color);
   padding-left: 40px;
   padding-right: 40px;
+  border-radius: 15px;
   color: var(--primary-color);
   padding-top: 10px;
   padding-bottom: 10px;

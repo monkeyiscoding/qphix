@@ -141,7 +141,7 @@ function codeverify() {
       localStorage.setItem("login", "true");
       localStorage.setItem("username", name);
       localStorage.setItem("number", number);
-      alert("Login Successfully");
+      myFunction("Login successfully")
       window.location.replace("index.html");
     })
 
@@ -153,4 +153,15 @@ function codeverify() {
     $("#error").css("visibility", "visible");
       $("#loader").fadeOut();
   })
+}
+
+function myFunction(text) {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+  x.innerHTML = text;
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
