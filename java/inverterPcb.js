@@ -96,28 +96,24 @@ var month_key = "";
 var count = "";
 var month_title = "";
 
-function fillForm(text,digit,mc,key,title) {
+function fillForm(text, digit, mc, key, title) {
   month_key = key;
   month_title = title;
   //localStorage.setItem("lastname", "Smith");
   var login = localStorage.getItem("login");
 
-  if(login == "true"){
+  if (login == "true") {
     var createCount = parseInt(digit) + 1;
 
-    if(digit <10){
-      count = "0"+createCount.toString();
+    if (digit < 10) {
+      count = "0" + createCount.toString();
     }
-    if(digit >=10){
+    if (digit >= 10) {
       count = createCount.toString();
     }
 
-    if(mc <10){
-      month_count = "0"+mc.toString();
-    }
-    if(mc >=10){
-      month_count = mc.toString();
-    }
+    month_count = mc.toString();
+
 
 
 
@@ -126,9 +122,25 @@ function fillForm(text,digit,mc,key,title) {
     $("#title-text").html(`REGISTER YOUR SEAT FOR ${text}`)
     $("#dialog-booking").fadeIn();
 
-  }
-  else{
-    window.location.replace("login.html");
+  } else {
+    //window.location.replace("login.html");
+    var createCount = parseInt(digit) + 1;
+
+    if (digit < 10) {
+      count = "0" + createCount.toString();
+    }
+    if (digit >= 10) {
+      count = createCount.toString();
+    }
+
+    month_count = mc.toString();
+
+
+
+    month = text;
+
+    $("#title-text").html(`REGISTER YOUR SEAT FOR ${text}`)
+    $("#dialog-booking").fadeIn();
   }
 
 }
@@ -214,8 +226,8 @@ document.getElementById('register-seat').onclick = function(e) {
     $("#error").css("display", "none");
 
     var options = {
-      "key": "rzp_live_25RshOlv3jiE3w", // Enter the Key ID generated from the Dashboard
-      //"key": "rzp_test_NSMMzlfJxi1ZzK", // Enter the Key ID generated from the Dashboard
+      //"key": "rzp_live_25RshOlv3jiE3w", // Enter the Key ID generated from the Dashboard
+      "key": "rzp_test_NSMMzlfJxi1ZzK", // Enter the Key ID generated from the Dashboard
 
       "amount": "100", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
@@ -313,7 +325,7 @@ function uploadimage(key) {
   var myRef = firebase.database().ref().push();
 
   var key2 = myRef.key;
-  var key3 = myRef.key+"2_selfie";
+  var key3 = myRef.key + "2_selfie";
 
 
   var file = document.getElementById("image-input-aadhar").files[0];
@@ -339,7 +351,7 @@ function uploadimage(key) {
         var myRef = firebase.database().ref().push();
 
 
-        var code = "QPBX50-"+month_count.toString()+count.toString();
+        var code = "QPBX50-" + month_count.toString() + count.toString();
         firebase.database().ref("Registrations/" + key).set({
           aadhar: aadharUrl,
           selfie: selfiUrl,
@@ -355,7 +367,7 @@ function uploadimage(key) {
             alert("Something went wrong");
           } else {
             localStorage.setItem("booking", "true");
-            localStorage.setItem("booking_id", "QPBX50-");
+            localStorage.setItem("booking_id", code);
             $("#loader").fadeOut();
             $("#dialog-booking").fadeOut();
             $("#dialog").fadeOut();
@@ -368,10 +380,11 @@ function uploadimage(key) {
               date: month,
               key: month_key,
               title: month_title,
+              month_count: month_count,
             })
-
-            window.close();
-            window.open("index.html");
+            $("#des-booking").html(`Your Seat successfully Conformd for ${month} <br> Your training id is`)
+            $("#id").html(code)
+            $("#conform").fadeIn();
 
 
           }
@@ -385,3 +398,10 @@ function uploadimage(key) {
   });
 
 }
+
+
+$("#got").click(function(){
+  $("#conform").fadeOut();
+  window.close();
+  window.location.replace("index.html");
+})

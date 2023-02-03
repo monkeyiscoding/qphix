@@ -64,11 +64,11 @@ function checkUser(number) {
     number = "+91" + numberPreview
   }
 
-  query.once('value', function(snapshot) {
 
+  query.once('value', function(snapshot) {
     if (snapshot.hasChild(number)) {
       $("#loader").fadeOut();
-      alert('exists');
+      phoneAuth();
     } else {
       $("#error").html("User not fount");
       $("#loader").fadeOut();
@@ -78,4 +78,91 @@ function checkUser(number) {
 
 
 
+}
+
+
+// function for send OTP
+function phoneAuth() {
+  var number = "";
+  var numberPreview = $("#number").val();
+
+
+  if (numberPreview.startsWith("0")) {
+    numberPreview = numberPreview.slice(1);
+  }
+
+
+  if (numberPreview.indexOf("+91") < 1) {
+    number = "+91" + numberPreview
+  }
+
+
+  firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function(confirmationResult) {
+    window.confirmationResult = confirmationResult;
+    coderesult = confirmationResult;
+    $("#error").css("visibility", "hidden");
+    $("#verify").fadeIn();
+    $("#otp").fadeIn();
+    $("#number").fadeOut();
+    $("#username").fadeOut();
+    $("#signup").fadeOut();
+    $("#recaptcha-container").fadeOut();
+    $("#loader").fadeOut();
+  }).catch(function(error) {
+    // error in sending OTP
+    $("#error").html(error.message);
+    $("#error").css("visibility", "visible");
+    $("#loader").fadeOut();
+  });
+
+}
+
+$("#verify").click(function() {
+  $("#loader").fadeIn();
+  codeverify()
+})
+
+function codeverify() {
+  var number = "";
+  var name = $("#username").val();
+  var numberPreview = $("#number").val();
+
+
+  if (numberPreview.startsWith("0")) {
+    numberPreview = numberPreview.slice(1);
+  }
+
+
+  if (numberPreview.indexOf("+91") < 1) {
+    number = "+91" + numberPreview
+  }
+
+  var code = document.getElementById('otp').value;
+  coderesult.confirm(code).then(function() {
+
+    var ref = firebase.database().ref().push();
+    var key = ref.key;
+
+    firebase.database().ref("WebUsers/"+number).set({
+      name: name,
+      number: numberPreview,
+    }, function(error) {
+      if (error) {
+        alert("Something went wrong try again");
+        $("#loader").fadeOut();
+      } else {
+        $("#loader").fadeOut();
+        localStorage.setItem("login", "true");
+        localStorage.setItem("username", name);
+        localStorage.setItem("number", number);
+        alert("Login Successfully");
+        window.location.replace("index.html");
+      }
+    });
+
+  }).catch(function() {
+    $("#error").html("Invalid OTP");
+    $("#error").css("visibility", "visible");
+      $("#loader").fadeOut();
+  })
 }
