@@ -1,3 +1,5 @@
+
+localStorage.setItem("login","true");
 var booking = localStorage.getItem("booking");
 var login = localStorage.getItem("login");
 if(login == "true"){
@@ -19,4 +21,13 @@ $("#menu-open").click(function(){
 
 $("#menu-close").click(function(){
   $("#menu").fadeOut();
+})
+$("#account").click(function(){
+  if(login == "true"){
+    $("#menu").fadeIn();
+  }
+
+  else{
+    window.open("login.html","_self");
+  }
 })
