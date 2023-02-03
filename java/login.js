@@ -93,9 +93,9 @@ function phoneAuth(number) {
     $("#error").css("visibility", "hidden");
     $("#verify").fadeIn();
     $("#otp").fadeIn();
-    $("#number").fadeOut();
+    $("#phone").fadeOut();
     $("#username").fadeOut();
-    $("#signup").fadeOut();
+    $("#login").fadeOut();
     $("#recaptcha-container").fadeOut();
     $("#loader").fadeOut();
   }).catch(function(error) {
