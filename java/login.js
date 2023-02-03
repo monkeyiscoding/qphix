@@ -137,26 +137,16 @@ function codeverify() {
 
     query.once('value', function(snapshot) {
       var name = snapshot.val().name;
-      alert(name);
+      $("#loader").fadeOut();
+      localStorage.setItem("login", "true");
+      localStorage.setItem("username", name);
+      localStorage.setItem("number", number);
+      alert("Login Successfully");
+      window.location.replace("index.html");
     })
 
 
-    // firebase.database().ref("WebUsers/"+number).set({
-    //   name: name,
-    //   number: numberPreview,
-    // }, function(error) {
-    //   if (error) {
-    //     alert("Something went wrong try again");
-    //     $("#loader").fadeOut();
-    //   } else {
-    //     $("#loader").fadeOut();
-    //     localStorage.setItem("login", "true");
-    //     localStorage.setItem("username", name);
-    //     localStorage.setItem("number", number);
-    //     alert("Login Successfully");
-    //     window.location.replace("index.html");
-    //   }
-    // });
+
 
   }).catch(function() {
     $("#error").html("Invalid OTP");
