@@ -77,7 +77,7 @@ function loadbookings(){
 
         var number = localStorage.getItem("number");
 
-        if (phone.includes(number)) {
+        if (number.includes(phone)) {
 
           $("#t").html("MY BOOKINGS");
           bookings = true;
