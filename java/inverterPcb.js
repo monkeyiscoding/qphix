@@ -116,8 +116,11 @@ function fillForm(text, digit, mc, key, title) {
 
     var number = localStorage.getItem("number");
     var x = document.getElementById("phone");
-    x.setAttribute("value", number);
 
+    if (number.startsWith("+91")) {
+      number = number.slice(3);
+    }
+    x.setAttribute("value", number);
 
     month = text;
 
