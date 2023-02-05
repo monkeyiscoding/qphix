@@ -42,7 +42,7 @@ $("#account").click(function(){
 })
 
 
-
+var query = firebase.database().ref("Registrations");
 query.once('value', function(snapshot) {
 
   snapshot.forEach(
