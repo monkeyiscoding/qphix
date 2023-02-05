@@ -359,7 +359,6 @@ function uploadimage(key) {
           } else {
             localStorage.setItem("booking", "true");
             localStorage.setItem("booking_id", code);
-            localStorage.setItem("number", phone);
             $("#loader").fadeOut();
             $("#dialog-booking").fadeOut();
             $("#dialog").fadeOut();
