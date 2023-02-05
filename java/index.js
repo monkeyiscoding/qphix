@@ -1,4 +1,16 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyBpRrmTK4449iHbUW_jNE1CjaWYTdmGdaY",
+  authDomain: "qphix-training-193c9.firebaseapp.com",
+  databaseURL: "https://qphix-training-193c9-default-rtdb.firebaseio.com",
+  projectId: "qphix-training-193c9",
+  storageBucket: "qphix-training-193c9.appspot.com",
+  messagingSenderId: "343406672827",
+  appId: "1:343406672827:web:10ca29f861cc2c08a3e29e",
+  measurementId: "G-KMZM22KYZW"
+};
 
+
+firebase.initializeApp(firebaseConfig);
 var booking = localStorage.getItem("booking");
 var login = localStorage.getItem("login");
 if(login == "true"){
