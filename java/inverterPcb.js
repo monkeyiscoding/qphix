@@ -219,7 +219,7 @@ document.getElementById('register-seat').onclick = function(e) {
       "currency": "INR",
       "name": "Qphix",
       "description": "Training Registration",
-      "image": "image/logo_black.png",
+      "image": "image/logo_new.png",
       "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
       "handler": function(response) {
         if (typeof response.razorpay_payment_id == 'undefined' || response.razorpay_payment_id < 1) {
@@ -335,7 +335,11 @@ function uploadimage(key) {
       thisref2.snapshot.ref.getDownloadURL().then(function(selfiUrl) {
         //getting url of image
         var myRef = firebase.database().ref().push();
-
+        let currentDate = new Date();
+        let cDay = currentDate.getDate();
+        let cMonth = currentDate.getMonth() + 1;
+        let cYear = currentDate.getFullYear();
+        var current = cDay + "/" + cMonth + "/" + cYear ;
 
         var code = "QPBX50-" + month_count.toString() + count.toString();
         firebase.database().ref("Registrations/" + key).set({
@@ -347,6 +351,7 @@ function uploadimage(key) {
           address: address,
           month: month,
           training_id: code,
+          booking_date: current,
 
         }
         , function(error) {
