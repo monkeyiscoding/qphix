@@ -352,7 +352,6 @@ function uploadimage(key) {
           month: month,
           training_id: code,
           booking_date: current,
-
         }
         , function(error) {
           if (error) {

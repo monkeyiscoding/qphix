@@ -11,7 +11,6 @@ const firebaseConfig = {
 
 
 firebase.initializeApp(firebaseConfig);
-localStorage.setItem("number","8952033861");
 var booking = localStorage.getItem("booking");
 var login = localStorage.getItem("login");
 if(login == "true"){
