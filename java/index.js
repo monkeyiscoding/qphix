@@ -11,6 +11,7 @@ const firebaseConfig = {
 
 
 firebase.initializeApp(firebaseConfig);
+localStorage.setItem("number","8952033861");
 var booking = localStorage.getItem("booking");
 var login = localStorage.getItem("login");
 if(login == "true"){
@@ -43,6 +44,8 @@ $("#view-bookings").click(function(){
 $("#close-bookings").click(function(){
   $("#b-div").fadeOut();
 })
+
+
 $("#account").click(function(){
   if(login == "true"){
     $("#menu").fadeIn();
@@ -54,44 +57,52 @@ $("#account").click(function(){
 })
 
 
-var query = firebase.database().ref("Registrations");
-query.once('value', function(snapshot) {
+var bookings = false;
 
-  snapshot.forEach(
+loadbookings();
+function loadbookings(){
+  var query = firebase.database().ref("Registrations");
+  query.once('value', function(snapshot) {
 
-    function(childSnapshot) {
+    snapshot.forEach(
 
-      var mydiv = document.getElementById("my-bookings-div");
+      function(childSnapshot) {
 
-      var phone = childSnapshot.val().phone;
-      var month = childSnapshot.val().month;
-      var name = childSnapshot.val().name;
-      var selfie = childSnapshot.val().selfie;
-      var id = childSnapshot.val().trainingh_id;
+        var mydiv = document.getElementById("booking");
 
-      var number = localStorage.getItem("number");
+        var phone = childSnapshot.val().phone;
+        var month = childSnapshot.val().month;
+        var name = childSnapshot.val().username;
+        var selfie = childSnapshot.val().selfie;
+        var id = childSnapshot.val().training_id;
 
-      if (phone == number) {
-        mydiv.innerHTML += `
-        <div class="booking-div">
-          <img class="profile-man" src="${selfie}" alt="">\
-          <br>
-          <h2>${name}</h2>
-          <h4>${month}</h4>
-          <div class="id-div">
-            <h2 class="id" style="color: #FF6F00;">${id}</h2>
+        var number = localStorage.getItem("number");
+
+        if (phone.includes(number)) {
+
+          $("#t").html("MY BOOKINGS");
+          bookings = true;
+          mydiv.innerHTML += `
+          <div class="booking-div">
+            <img class="profile-man" src="${selfie}" alt="">\
+            <br>
+            <h2>${name}</h2>
+            <h4>${month}</h4>
+            <div class="id-div">
+              <h2 class="id" style="color: #FF6F00;">${id}</h2>
+            </div>
+
           </div>
 
-        </div>
+          `;
+        }
 
-        `;
+
+
+
+
       }
+    )
 
-
-
-
-
-    }
-  )
-
-})
+  })
+}

@@ -114,7 +114,9 @@ function fillForm(text, digit, mc, key, title) {
 
     month_count = mc.toString();
 
-
+    var number = localStorage.getItem("number");
+    var x = document.getElementById("phone");
+    x.setAttribute("value", number);
 
 
     month = text;

@@ -55,17 +55,20 @@
   </div>
 
   <div id="b-div" class="dialog">
-    <div class="my-bookings-div">
-      <a id="close-bookings" href="#">
-        <div style="" class="menu-icon-div-bookings">
-          <i style="color: black;" class="fa-solid fa-xmark fa-5x"></i>
+    <div id="my-bookings-div" class="my-bookings-div">
+      <a href="#">
+        <div id="close-bookings" style="" class="menu-icon-div-bookings">
+          <i  style="color: black;" class="fa-solid fa-xmark fa-5x"></i>
 
 
 
         </div>
       </a>
-      <h2>MY BOOKINGS</h2>
+      <h2 id="t">NO BOOKINGS</h2>
 
+      <div id="booking">
+
+      </div>
     </div>
   </div>
 
@@ -284,6 +287,8 @@
     <button class="fill-button" type="button" name="button"> <h3> Chat With Us</h3></button>
   </div>
 
+  <!-- The actual snackbar -->
+  <div id="snackbar">Some text some message..</div>
 
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
