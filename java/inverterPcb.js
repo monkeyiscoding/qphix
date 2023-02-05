@@ -123,24 +123,8 @@ function fillForm(text, digit, mc, key, title) {
     $("#dialog-booking").fadeIn();
 
   } else {
-    //window.location.replace("login.html");
-    var createCount = parseInt(digit) + 1;
+    window.location.replace("login.html");
 
-    if (digit < 10) {
-      count = "0" + createCount.toString();
-    }
-    if (digit >= 10) {
-      count = createCount.toString();
-    }
-
-    month_count = mc.toString();
-
-
-
-    month = text;
-
-    $("#title-text").html(`REGISTER YOUR SEAT FOR ${text}`)
-    $("#dialog-booking").fadeIn();
   }
 
 }
@@ -362,12 +346,14 @@ function uploadimage(key) {
           month: month,
           training_id: code,
 
-        }, function(error) {
+        }
+        , function(error) {
           if (error) {
             alert("Something went wrong");
           } else {
             localStorage.setItem("booking", "true");
             localStorage.setItem("booking_id", code);
+            localStorage.setItem("number", phone);
             $("#loader").fadeOut();
             $("#dialog-booking").fadeOut();
             $("#dialog").fadeOut();
@@ -400,7 +386,7 @@ function uploadimage(key) {
 }
 
 
-$("#got").click(function(){
+$("#got").click(function() {
   $("#conform").fadeOut();
   window.close();
   window.location.replace("index.html");
