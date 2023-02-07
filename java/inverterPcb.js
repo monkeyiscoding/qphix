@@ -9,6 +9,18 @@ const firebaseConfig = {
   measurementId: "G-KMZM22KYZW"
 };
 
+var booking = localStorage.getItem("booking");
+var login = localStorage.getItem("login");
+if(login == "true"){
+  var name = localStorage.getItem("username");
+  var number = localStorage.getItem("number");
+  $("#login-text-pc").html(name);
+  $("#username").html(name);
+  $("#number").html(number);
+  $("#view-bookings").css("display","block");
+  $("#login-a").css("display","none");
+  $("#login-div-after").css("display","block");
+}
 
 firebase.initializeApp(firebaseConfig);
 var query = firebase.database().ref("training_months");
@@ -218,7 +230,7 @@ document.getElementById('register-seat').onclick = function(e) {
       //"key": "rzp_live_25RshOlv3jiE3w", // Enter the Key ID generated from the Dashboard
       "key": "rzp_test_NSMMzlfJxi1ZzK", // Enter the Key ID generated from the Dashboard
 
-      "amount": "100", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "amount": "30000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
       "name": "Qphix",
       "description": "Training Registration",

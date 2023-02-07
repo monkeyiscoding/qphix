@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Qphix</title>
-
+  <link rel="icon" href="images\logo_new.png">
   <link rel="stylesheet" href="css/index.css">
 
   <!-- Font Awsome -->
@@ -69,6 +69,7 @@
       <div id="booking">
 
       </div>
+
     </div>
   </div>
 
@@ -104,12 +105,13 @@
   <div class="gape">
 
   </div>
+
   <div class="intro-div-pc">
 
     <h1 class="heading">BE A PROFESSIONAL <br> WITH US</h1>
     <h3 style="color: grey;">BOOK THE COURSE IS PERFECT FOR YOUR FIELD AND <br> BE A PROFESSIONAL ON IT WITH US</h3>
 
-    <button style="margin-top: 20px;" class="primary-button" type="button" name="button">Explore Courses <i style="margin-left: 10px;" class="fa-solid fa-arrow-right"></i></button>
+    <button id="explore-pc" style="margin-top: 20px;" class="primary-button" type="button" name="button">Explore Courses <i style="margin-left: 10px;" class="fa-solid fa-arrow-right"></i></button>
 
     <img class="flying-boy floating" src="images/flying_boy.png" alt="">
 
@@ -139,7 +141,7 @@
     <h4 style="color: grey;">BOOK THE COURSE IS PERFECT FOR YOUR FIELD AND BE A PROFESSIONAL ON IT <br> WITH US</h4>
 
     <img class="flying-boy-phone floating" src="images/flying_boy_phone.png" alt="">
-    <button style="margin-top: 20px; padding-top: 30px; padding-bottom: 20px; border-radius: 20px;" class="primary-button" type="button" name="button">
+    <button id="explore" style="margin-top: 20px; padding-top: 30px; padding-bottom: 20px; border-radius: 20px;" class="primary-button" type="button" name="button">
       <h3>Explore Courses <i style="margin-left: 10px;" class="fa-solid fa-arrow-right"></i></h3>
     </button>
 
@@ -182,7 +184,7 @@
 
       <h5 style="color: #FF6F00;">All type of inverter pcb included <br> in this course</h5>
 
-      <button style="margin-top: 50px;" class="primary-button" type="button" name="button" onclick="window.open('InverterPcb.html')">BOOK COURSE</button>
+      <button style="margin-top: 50px;" class="primary-button" type="button" name="button" onclick="window.open('InverterPcb.html','_self')">BOOK COURSE</button>
 
     </div>
 
@@ -192,7 +194,7 @@
 
       <h5 style="color: #FF6F00;">All type of VRV / VRF pcb included <br> in this course</h5>
 
-      <button style="margin-top: 50px;" class="primary-button" type="button" name="button">BOOK COURSE</button>
+      <button id="vrf" style="margin-top: 50px;" class="primary-button" type="button" name="button">BOOK COURSE</button>
 
     </div>
 
@@ -203,7 +205,7 @@
 
       <h5 style="color: #FF6F00;">All type of inverter pcb included <br> in this course</h5>
 
-      <button style="margin-top: 50px;" class="primary-button" type="button" name="button">BOOK COURSE</button>
+      <button id="appliance" style="margin-top: 50px;" class="primary-button" type="button" name="button">BOOK COURSE</button>
 
     </div>
 
@@ -219,7 +221,7 @@
 
       <h4 style="color: #FF6F00;">All type of inverter pcb included <br> in this course</h4>
 
-      <button style="margin-top: 180px; padding: 30px 70px 20px 70px; " class="primary-button" type="button" name="button" onclick="window.open('InverterPcb.html')">
+      <button style="margin-top: 180px; padding: 30px 70px 20px 70px; " class="primary-button" type="button" name="button" onclick="window.open('InverterPcb.html','_self')">
         <h3>BOOK COURSE</h3>
       </button>
 
@@ -232,7 +234,7 @@
 
       <h4 style="color: #FF6F00;">All type of VRV / VRF pcb included <br> in this course</h4>
 
-      <button style="margin-top: 180px; padding: 30px 70px 20px 70px; " class="primary-button" type="button" name="button">
+      <button id="vrf1" style="margin-top: 180px; padding: 30px 70px 20px 70px; " class="primary-button" type="button" name="button">
         <h3>BOOK COURSE</h3>
       </button>
 
@@ -245,7 +247,7 @@
 
       <h4 style="color: #FF6F00;">All type of inverter pcb included <br> in this course</h4>
 
-      <button style="margin-top: 180px; padding: 30px 70px 20px 70px; " class="primary-button" type="button" name="button">
+      <button id="appliance1" style="margin-top: 180px; padding: 30px 70px 20px 70px; " class="primary-button" type="button" name="button">
         <h3>BOOK COURSE</h3>
       </button>
 
@@ -284,7 +286,8 @@
     <h2 style="color: #FF6F00; margin: 0px 100px 0px 100px;">CONTACT US IF YOU ARE INTRESTED ON OUR WORK</h2>
     <h4 style="color: grey; font-weight: 300;margin: 0px 100px 0px 100px;">Kalwar road govindpura kk tower 2nd floor qphix office <br>Jaipur Rajasthan </h4>
 
-    <button class="fill-button" type="button" name="button"> <h3> Chat With Us</h3></button>
+    <a href="https://wa.me/<+917297939704>"><button class="fill-button" type="button" name="button" onclick=""> <h3> Chat With Us</h3></button></a>
+
   </div>
 
   <!-- The actual snackbar -->
