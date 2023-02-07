@@ -11,6 +11,7 @@ const firebaseConfig = {
 
 var booking = localStorage.getItem("booking");
 var login = localStorage.getItem("login");
+
 if(login == "true"){
   var name = localStorage.getItem("username");
   var number = localStorage.getItem("number");
@@ -227,10 +228,10 @@ document.getElementById('register-seat').onclick = function(e) {
     $("#error").css("display", "none");
 
     var options = {
-      //"key": "rzp_live_25RshOlv3jiE3w", // Enter the Key ID generated from the Dashboard
-      "key": "rzp_test_NSMMzlfJxi1ZzK", // Enter the Key ID generated from the Dashboard
+      "key": "rzp_live_25RshOlv3jiE3w", // Enter the Key ID generated from the Dashboard
+      //"key": "rzp_test_NSMMzlfJxi1ZzK", // Enter the Key ID generated from the Dashboard
 
-      "amount": "30000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "amount": "300000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
       "name": "Qphix",
       "description": "Training Registration",
