@@ -224,13 +224,11 @@ document.getElementById('register-seat').onclick = function(e) {
     $("#error").html("Enter complete address");
     $("#error").css("display", "block");
   } else {
-
     $("#error").css("display", "none");
 
     var options = {
       "key": "rzp_live_25RshOlv3jiE3w", // Enter the Key ID generated from the Dashboard
       //"key": "rzp_test_NSMMzlfJxi1ZzK", // Enter the Key ID generated from the Dashboard
-
       "amount": "300000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
       "name": "Qphix",
